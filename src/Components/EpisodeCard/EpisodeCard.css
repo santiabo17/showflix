@@ -1,0 +1,33 @@
+.episode_card_container{
+    position: relative;
+    background-color: black;
+    border: 2px solid white;
+    color: white;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    cursor: pointer;
+    /* margin-bottom: 10px; */
+}
+
+.episode_selected{
+    background-color: white;
+    border: 2px solid black;
+    color: black;
+}
+
+.episode_info{
+    text-align: left;
+    padding-left: 15px;
+    margin: 0px;
+    width: 60%;
+}
+
+.episode_data{
+    margin: 0px;
+    margin-bottom: 5px;
+}
+
+.img_episode{
+    width: 150px;
+}

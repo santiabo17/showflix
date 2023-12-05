@@ -1,0 +1,16 @@
+.nav{
+    display: flex;
+    gap: 50px;
+    padding-left: 50px;
+    background-color: black;
+    color: white;
+    margin-bottom: 30px;
+}
+
+.nav_item{
+    text-decoration: none;
+    padding: 5px 0px;
+    color: white;
+    font-weight: 500;
+    
+}

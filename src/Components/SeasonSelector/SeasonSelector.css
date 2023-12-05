@@ -1,0 +1,14 @@
+.season_selector{
+    background-color: black;
+    color: white;
+    font-weight: 600;
+    height: 50px;
+    width: 20%;
+    font-size: 15px;
+}
+
+/* .season_card{
+    background-color: green;
+    display: flex;
+    justify-content: space-between;
+} */

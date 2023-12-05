@@ -1,0 +1,22 @@
+.loading_card{
+    position: absolute;
+    background-color: rgb(158, 153, 153);
+    background: transparent;
+    overflow: hidden;
+    background-image: linear-gradient(180deg, rgb(156, 156, 156), rgb(73, 73, 73));
+    animation-name: loadingAnimation;
+    animation-duration: 1s;
+    animation-iteration-count: infinite;
+    animation-direction: alternate;
+}
+
+@keyframes loadingAnimation {
+    0% {
+      background-position: 0% 50%;
+      background-size: 100% 100%;
+    }
+    100% {
+      background-position: 100% 50%;
+      background-size: 100% 200%;
+    }
+  }

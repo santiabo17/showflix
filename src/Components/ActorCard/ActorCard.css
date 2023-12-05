@@ -1,0 +1,21 @@
+.actor_card_container{
+    padding: 0px;
+    background-color: white;
+    color: black;
+    text-transform: uppercase;
+    height: 300px;
+    width: 200px;
+    /* overflow: hidden; */
+}
+
+.actor_name{
+    font-size: 20px;
+    padding: 10px 0px;
+    margin: 0px;
+}
+
+.actor_image{
+    height: 254.6px;
+    /* width: 100%; */
+    /* object-fit: cover; */
+}

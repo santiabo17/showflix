@@ -1,0 +1,72 @@
+.cast_container{
+    margin: auto;
+    display: flex;
+    overflow: hidden;
+    flex-wrap: wrap;
+    gap: 15px;
+    width: 90%;
+    justify-content: center;
+}
+
+.showpage_title{
+    font-size: 70px;
+    text-transform: uppercase;
+}
+
+.show_content{
+    display: flex;
+    justify-content: center;
+}
+
+.show_info{
+    font-size: 14px;
+    /* background-color: white; */
+    /* color: black; */
+    text-align: start;
+    padding: 0px 40px;
+    width: 40%;
+    height: 500px;
+}
+
+.show_info_elements{
+    font-weight: 500;
+}
+
+.show_image{
+    width: min-content;
+    min-width: 300px;
+    height: 500px;
+    object-fit: contain;
+    background-color: green;
+}
+
+.show_desc{
+    margin: 0px;
+    text-align: justify;
+    font-weight: 300;
+}
+
+.link_official_site{
+    color: white;
+    font-size: 15px;
+}
+
+.season_opc_container{
+    width: 25%;
+}
+
+.cast_title{
+    font-size: 50px;
+}
+
+.btn_show-actors{
+    background-color: black;
+    color: white;
+    font-size: 25px;
+    padding: 10px;
+    cursor: pointer;
+    margin: 40px 0 80px;
+    box-shadow: 0px 0px 15px 5px rgba(255, 255, 255, 0.35);
+}
+
+

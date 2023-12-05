@@ -1,0 +1,45 @@
+:root {
+    --xSlide: -30px;
+}
+
+.section_opc_container{
+    margin: 10px auto;
+    width: 50%;
+    overflow: hidden;
+    /* background-color: gray; */
+    /* justify-content: center; */
+}
+
+.opc_container{
+    /* background-color: green; */
+    display: flex;
+    flex-wrap: wrap;
+    width: max-content;
+    gap: 15px;
+    padding: 0px;
+    list-style: none;
+    transform: translateX(var(--xSlide));
+    transition: transform 0.5s ease;
+}
+
+
+.sections_opc{
+    background-color: white;
+    color: black;
+    width: 30px;
+    height: 30px;
+    margin: auto;
+    flex: 0 0 auto;
+    padding: 5px;
+    font-size: 25px;
+    font-weight: bold;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+}
+
+.sections_opc_selected{
+    width: 45px;
+    height: 45px;
+}
