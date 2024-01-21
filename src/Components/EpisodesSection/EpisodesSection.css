@@ -4,14 +4,64 @@
 
 .episodes_section{
     display: flex;
-    justify-content: center;
+}
+
+.episodes_selector{
+    display: flex;
+    width: 50%;
+    margin-left: 50%;
+    transform: translateX(-50%);
     gap: 10px;
-    transition: 2s;
+    transition: 1.5s ease;
+    background-color: red;
+    flex-grow: 1;
+}
+
+.episodes_selector_left{
+    margin-left: 50px;
+    transform: translateX(0%);
 }
 
 .episodes_container{
-    width: 30%;
+    width: 70%;
     display: flex;
     flex-direction: column;
     gap: 10px;
+}
+
+.episode_selected_content{
+    /* background-color: green; */
+background: linear-gradient(0deg, rgb(0, 255, 4) 0%, rgba(0,255,4,1) 50%, rgb(225, 255, 0) 50%, rgba(225, 255, 0,1) 100%);
+top: 0px;
+    width: 45%;
+    text-align: start;
+    padding-left: 40px;
+    height: fit-content;
+    z-index: -1;
+}
+
+.episode_selected_content_animation{
+    animation: append-animate;
+    animation-duration: 4s;
+}
+
+@keyframes append-animate {
+	0% {
+		transform: translateX(-100%);
+		opacity: 0;
+	}
+    30%{
+        transform: translateX(-100%);
+		opacity: 0;
+    }
+	100% {
+		transform: translateX(0%);
+		opacity: 1;
+	}
+}
+
+.img_episode_info{
+    width: 90%;
+    /* object-fit: none; */
+    height: auto;
 }

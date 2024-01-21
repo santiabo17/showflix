@@ -1,0 +1,35 @@
+.actor_data_container{
+    display: flex;
+    justify-content: center;
+}
+
+.actorPage_image{
+    height: 400px;
+    width: auto;
+    object-fit: contain;
+    background-color: red;
+}
+
+.actor_info_container{
+    padding-left: 10px;
+    background-color: green;
+    text-transform: capitalize;
+    text-align: left;
+    min-width: 300px;
+}
+
+.actorPage_name{
+    font-size: 60px;
+    margin-bottom: 20px;
+    margin-top: 10px;
+}
+
+.papers_container{
+    width: 100%;
+    margin: 0 auto;
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 20px;
+    grid-template-columns: repeat(3, 1fr);
+}

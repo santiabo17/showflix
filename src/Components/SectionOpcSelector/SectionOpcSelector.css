@@ -4,7 +4,8 @@
 
 .section_opc_container{
     margin: 10px auto;
-    width: 50%;
+    width: fit-content;
+    max-width: 50%;
     overflow: hidden;
     /* background-color: gray; */
     /* justify-content: center; */

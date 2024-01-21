@@ -1,4 +1,3 @@
-import logo from './logo.svg';
 import './App.css';
 import React from 'react';
 import { BrowserRouter} from 'react-router-dom';
@@ -6,6 +5,11 @@ import { useRoutes } from 'react-router-dom';
 import { Navbar } from './Components/Navbar';
 import { Home } from './Pages/Home';
 import { Show } from './Pages/Show';
+import { Searcher } from './Pages/Searcher';
+import { ActorPage } from './Pages/ActorPage';
+import { FavsPage } from './Pages/FavsPage';
+import { ScrollToTop } from './Utils/ScrollToTop';
+import { GenreShows } from './Pages/GenreShows';
 
 function App() {
 
@@ -16,9 +20,25 @@ function App() {
         element: <Home/>
       },
       {
+        path: '/:genre',
+        element: <GenreShows/>
+      },
+      {
         path: '/show/:id',
         element: <Show/>
-      }
+      },
+      {
+        path: '/search',
+        element: <Searcher/>
+      },
+      {
+        path: '/actor/:id',
+        element: <ActorPage/>
+      },
+      {
+        path: '/favs',
+        element: <FavsPage/>
+      },
     ])
 
     return routes;
@@ -29,6 +49,7 @@ function App() {
       <div className="App">
         <h1 className='title'>My Netflix</h1>
         <BrowserRouter>
+          <ScrollToTop />
           <Navbar/>
           <AppRoutes/>
         </BrowserRouter>

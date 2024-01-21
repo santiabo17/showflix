@@ -1,12 +1,15 @@
 .episode_card_container{
     position: relative;
     background-color: black;
+    box-sizing: border-box;
     border: 2px solid white;
     color: white;
     display: flex;
     align-items: center;
     justify-content: space-between;
     cursor: pointer;
+    transition: 1s;
+    height: 100px;
     /* margin-bottom: 10px; */
 }
 
@@ -30,4 +33,5 @@
 
 .img_episode{
     width: 150px;
+    height: 96px;
 }

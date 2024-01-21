@@ -1,0 +1,98 @@
+a{
+    text-decoration: none;
+}
+
+.paperCard_container{
+    background-color: rgba(0, 0, 0, 0.2);
+    border: 2px solid white;
+    position: relative;
+    overflow: hidden;
+    height: 200px;
+    width: 450px;
+    display: flex;
+    align-items: end;
+    justify-content: center;
+}
+
+.character_image{
+    position: absolute;
+    top: -50%;
+    left: -30%;
+    height: 400px;
+    object-fit: contain;
+    z-index: -2;
+    transform-origin: right top;
+    transition: .5s;
+}
+
+.showPaper_image{
+    position: absolute;
+    right: 0%;
+    width: fit-content;
+    height: 200px;
+    object-fit: contain;
+    z-index: -2;
+    transform-origin: left top;
+    transition: .5s;
+}
+
+
+.paperCard_container:hover .showPaper_image,
+.paperCard_container:hover .character_image{
+    transform: scale(1.2);
+}
+
+.paperCard_container:hover .paper_text{
+    height: 200px;
+    font-size: 30px;
+}
+
+.paper_text{
+    width: 100%;
+    height: 100px;
+    font-size: 18px;
+    color: white;
+    background: linear-gradient(180deg, rgba(0,0,0,0) 0%, rgba(0,0,0,1) 80%);
+    padding: 0px 10px;
+    font-size: 20px;
+    display: flex;
+    align-items: end;
+    transition: .5s;
+    cursor: default;
+}
+
+.character_text{
+    text-align: left;
+    /* background-color: blue; */
+    width: 50%;
+    margin: 0px;
+    height: 70%;
+}
+
+.show_text{
+    text-align: right;
+    /* background-color: green; */
+    width: 50%;
+    margin: 0px;
+    height: 70%;
+}
+
+.paperText_title{
+    font-size: 0.4em;
+    margin: 0px;
+}
+
+.paperText_description{
+    font-size: 1em;
+    margin: 0px;
+}
+
+.fade{
+    width: 70%;
+    height: 200px;
+    position: absolute;
+    left: 100px;
+    background-color: black;
+    background: linear-gradient(90deg, rgba(0,0,0,0) 0%, rgba(0,0,0,1) 35%, rgba(0,0,0,1) 65%, rgba(0,0,0,0) 100%);
+    z-index: -1;
+}
