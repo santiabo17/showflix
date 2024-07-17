@@ -1,12 +1,8 @@
 import React from "react";
 import { ShowContainer } from "../../Components/ShowContainer";
-import { ShowCard } from "../../Components/ShowCard";
 import { SectionOpcSelector } from "../../Components/SectionOpcSelector";
-import { ShowsLoading } from "../../Components/ShowsLoading";
-import { Link, useLocation } from "react-router-dom";
+import { useLocation } from "react-router-dom";
 import './GenreShows.css'
-import searchIcon from '../../static/search.svg';
-import { Searcher } from "../Searcher";
 import { useLocalStorage } from "../../Utils/useLocalStorage";
 
 function GenreShows() {
@@ -18,8 +14,6 @@ function GenreShows() {
     const [cantShows, setCantShows] = React.useState(0);
     const [loading, setLoading] = React.useState(true);
     const [genre, setGenre] = React.useState(location.pathname.slice(1, location.pathname.length));
-
-    
 
     React.useEffect(() => {
       setLoading(true);
@@ -81,12 +75,6 @@ function GenreShows() {
   return(
     <>
         <h1>{genre}</h1>
-      	<Link to='/search' state={{shows}}>
-          <div className='search_button'>
-              <span>Buscar</span>
-              <img className='search_icon' src={searchIcon}/>
-          </div>
-        </Link>
         <ShowContainer loading={loading} shows={genresShow} section={section} favouritesShows={favouritesShows} favShowAction={addShows}/>
         {genresShow?.length > 42 && <SectionOpcSelector section={section} setSection={setSection} cantShows={cantShows}/>}
     </>

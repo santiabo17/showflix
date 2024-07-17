@@ -1,11 +1,9 @@
 import React from "react";
 import './Show.css'
 import { ActorCard } from "../../Components/ActorCard";
-import { SeasonCard, SeasonSelector } from "../../Components/SeasonSelector";
-import { EpisodeCard } from "../../Components/EpisodeCard";
 import { EpisodesSection } from "../../Components/EpisodesSection";
 import { removeHtmlTags } from "../../Utils/removeHtmlTags";
-import { LoadingCard } from "../../Components/LoadingCard";
+import externalIcon from '../../static/external_icon.svg';
 import { ImageCard } from "../../Components/ImageCard";
 
 function Show () {
@@ -55,14 +53,16 @@ function Show () {
             <h1 className="showpage_title">{show?.name}</h1>
             <section className="show_content">
                 <ImageCard url={show?.image.original} height='500px' width='340px' loading={loading}/>
-                {/* <img className="show_image" src={show?.image.original}/> */}
                 <div className="show_info">
                     <h3 className='show_desc'>{show && removeHtmlTags(show?.summary)}</h3>
                     <h3 className="show_info_elements"><u>ESTRENO:</u> {show && dateConverter(show.premiered)}</h3>
                     <h3 className="show_info_elements"><u>RATING:</u> {show?.rating.average}</h3>
                     <h3 className="show_info_elements"><u>TEMPORADAS:</u> {show?.cantSeasons}</h3>
                     <h3 className="show_info_elements"><u>GENEROS:</u> {show?.genres.map(genre => <span>{genre}, </span>)}</h3>
-                    <a className="link_official_site" href={show?.officialSite}>Official site</a>
+                    {show?.officialSite && <div className="link_official_site">
+                            <a  href={show?.officialSite}>Official site</a>
+                            <img src={externalIcon} alt="" srcset="" />
+                        </div>}
                 </div>
             </section>
             <h2 className="cast_title">CAST</h2>
@@ -82,13 +82,10 @@ function Show () {
                         window.scrollTo({top: distanceToTop, behavior: "smooth"});
                     }
                 }}> 
-                    {showAllActors ? 'Watch less' : 'Watch more'}
+                    {showAllActors ? 'WATCH LESS' : 'WATCH MORE'}
                 </button>
             }
             <EpisodesSection showIndex={index}></EpisodesSection>
-            <section className="green">
-                <div className="red"></div>
-            </section>
         </>
     )
 }

@@ -47,8 +47,8 @@ function App() {
   return (
    
       <div className="App">
-        <h1 className='title'>My Netflix</h1>
-        <BrowserRouter>
+        <h1 className='title'>Showflix</h1>
+        <BrowserRouter basename='/showflix'>
           <ScrollToTop />
           <Navbar/>
           <AppRoutes/>

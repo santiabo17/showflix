@@ -45,8 +45,21 @@
 }
 
 .link_official_site{
+    display: flex;
+    gap: 4px;
+    margin-left: 80%;
+}
+
+.link_official_site > img {
     color: white;
-    font-size: 15px;
+    width: 15px;
+}
+
+.link_official_site > a {
+    color: white;
+    font-size:17px;
+    font-weight: 500;
+    text-decoration: underline 2px;
 }
 
 .season_opc_container{
@@ -55,16 +68,32 @@
 
 .cast_title{
     font-size: 50px;
+    border-bottom: solid 6px rgb(220, 220, 220);
+    /* border-bottom: solid 3px white; */
+    padding-bottom: 2px;
 }
 
 .btn_show-actors{
-    background-color: black;
-    color: white;
-    font-size: 25px;
+    box-sizing: border-box;
+    background-color: rgb(28, 28, 28);
+    color: rgb(169, 169, 169);
+    font-size: 20px;
+    font-weight: lighter;
+    width: 200px;
     padding: 10px;
     cursor: pointer;
     margin: 40px 0 80px;
-    box-shadow: 0px 0px 15px 5px rgba(255, 255, 255, 0.35);
+    border: 1px solid rgb(169, 169, 169);
+    transition: .5s;
+    /* box-shadow: 0px 0px 15px 5px rgba(255, 255, 255, 0.35); */
+}
+
+.btn_show-actors:hover{
+    /* font-size: 22px; */
+    background-color: black;
+    color: rgb(243, 243, 243);
+    width: 300px;
+    border: 1px solid white;
 }
 
 

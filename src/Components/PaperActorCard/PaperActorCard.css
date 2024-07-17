@@ -3,96 +3,97 @@ a{
 }
 
 .paperCard_container{
-    background-color: rgba(0, 0, 0, 0.2);
+    /* background-color: rgba(0, 0, 0, 0.2); */
+    background-color: rgb(220, 220, 220);
+    background-color: rgb(21, 21, 21);
     border: 2px solid white;
+    border-radius: 10px;
     position: relative;
     overflow: hidden;
-    height: 200px;
-    width: 450px;
+    cursor: pointer;
+    /* height: auto; */
+    height: 125px;
+    /* width: 400px; */
     display: flex;
-    align-items: end;
     justify-content: center;
 }
 
 .character_image{
-    position: absolute;
-    top: -50%;
-    left: -30%;
-    height: 400px;
-    object-fit: contain;
-    z-index: -2;
+    aspect-ratio: 5/7;
+    width: fit-content;
+    object-fit: cover;
     transform-origin: right top;
     transition: .5s;
 }
 
 .showPaper_image{
-    position: absolute;
-    right: 0%;
     width: fit-content;
-    height: 200px;
     object-fit: contain;
-    z-index: -2;
     transform-origin: left top;
     transition: .5s;
 }
 
-
-.paperCard_container:hover .showPaper_image,
-.paperCard_container:hover .character_image{
-    transform: scale(1.2);
-}
-
 .paperCard_container:hover .paper_text{
-    height: 200px;
-    font-size: 30px;
+    color: black;
+    letter-spacing: 1px;
+    z-index: 1;
 }
+
+.paperCard_container:hover .paperText_description{
+    font-weight: 600;
+}
+
+.paperCard_container:hover .divisor_line{
+    height: 100%;
+    width: 62.5%;
+    border-radius: 0;
+}
+
 
 .paper_text{
-    width: 100%;
-    height: 100px;
-    font-size: 18px;
-    color: white;
-    background: linear-gradient(180deg, rgba(0,0,0,0) 0%, rgba(0,0,0,1) 80%);
+    margin: auto;
+    width: 80%;
+    font-size: 19px;
+    color: rgb(230, 230, 230);
+    white-space: nowrap;
     padding: 0px 10px;
-    font-size: 20px;
-    display: flex;
-    align-items: end;
-    transition: .5s;
-    cursor: default;
+    overflow-x: hidden;
+    transition: .4s;
 }
 
 .character_text{
     text-align: left;
-    /* background-color: blue; */
-    width: 50%;
     margin: 0px;
-    height: 70%;
 }
 
 .show_text{
     text-align: right;
-    /* background-color: green; */
-    width: 50%;
     margin: 0px;
-    height: 70%;
 }
 
 .paperText_title{
-    font-size: 0.4em;
+    font-weight: normal;
+    font-size: 0.5em;
     margin: 0px;
+    margin-top: 5px;
 }
 
 .paperText_description{
     font-size: 1em;
+    font-weight: 300;
     margin: 0px;
 }
 
-.fade{
-    width: 70%;
-    height: 200px;
+.divisor_line{
     position: absolute;
-    left: 100px;
-    background-color: black;
-    background: linear-gradient(90deg, rgba(0,0,0,0) 0%, rgba(0,0,0,1) 35%, rgba(0,0,0,1) 65%, rgba(0,0,0,0) 100%);
-    z-index: -1;
+    background-color: rgb(255, 255, 255);
+    border-radius: 10px;
+    width: 60%;
+    top: 50%;
+    left: 50%;
+    transform: translateX(-50%) translateY(-50%);
+    height: 3px;
+    /* margin: 10px 0; */
+    transition: .4s;
+    transition-timing-function: ease-in-out;
 }

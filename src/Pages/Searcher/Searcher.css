@@ -16,6 +16,7 @@
     display: flex;
     justify-content: space-between;
     align-items: center;
+    margin-bottom: 20px;
 }
 
 .searcher_input input{
@@ -32,16 +33,18 @@
 
 .close_btn{
     position: absolute;
-    background-color: red;
-    color: white;
-    border-radius: 50%;
     width: 30px;
     height: 30px;
     top: 10px;
     right: 40px;
+    color: white;
+    font-family: monospace;
+    border: 3px solid white;
+    border-radius: 50%;
     cursor: pointer;
     display: flex;
     align-items: center;
     justify-content: center;
-    font-weight: 700;
+    font-weight: 500;
+    font-size: 20px;
 }

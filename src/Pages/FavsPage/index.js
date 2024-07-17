@@ -1,7 +1,5 @@
 import React from "react";
-import { ShowCard } from "../../Components/ShowCard";
 import { ShowContainer } from "../../Components/ShowContainer";
-import { ShowsLoading } from "../../Components/ShowsLoading";
 import { useLocalStorage } from "../../Utils/useLocalStorage";
 import { SectionOpcSelector } from "../../Components/SectionOpcSelector";
 import { useLocation } from "react-router-dom";

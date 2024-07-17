@@ -1,27 +1,130 @@
-.actor_data_container{
-    display: flex;
-    justify-content: center;
+.actor_page_container{
+    display: grid;
+    padding: 0 30px;
+    grid-template-columns: repeat(3, 480px);
+    grid-template-rows:  125px;
+    grid-gap: 10px;
+    margin-bottom: 50px;
+    /* height: 125px; */
+    /* width: 400px; */
 }
 
-.actorPage_image{
-    height: 400px;
-    width: auto;
-    object-fit: contain;
-    background-color: red;
+.actor_data_card{
+    position: relative;
+    margin: auto;
+    /* width: 300px; */
+    /* height: 375px; */
+    /* grid-column: 1/3; */
+    grid-row: 1/5;
+    background-color: rgb(238, 238, 238);
+    border: 6px solid white;
+    border-radius: 10px;
+    color: rgb(34, 34, 34);
+    justify-content: center;
+    padding: 10px;
 }
 
 .actor_info_container{
-    padding-left: 10px;
-    background-color: green;
-    text-transform: capitalize;
+    padding: 3px;
+    border-block: 3px solid rgb(20, 20, 20);
+    margin-bottom: 10px;
+    transition: .5s;
+}
+
+.actorPage_image{
+    aspect-ratio: 4/5;
+    width: 350px;
+    object-fit: cover;
+    /* background-color: red; */
+}
+
+.actor_info{
+    display: flex;
+    flex-wrap: wrap;
+    width: 100%;
+    box-sizing: border-box;
+    padding: 0;
+    font-size: 12px;
+    line-height: 10px;
+    overflow: hidden;
     text-align: left;
-    min-width: 300px;
+    height: 0px;
+    transition: .7s;
+    transition-timing-function: ease-in-out;
+    /* animation: scale-in;
+    animation-duration: .8s;
+    animation-timing-function: ease-in-out;
+    animation-fill-mode: forwards; */
+}
+
+.actor_info_showed{
+    height: 100px;
+    padding: 6px 6px;
+}
+
+@keyframes scale-in{
+    from{height: 0px; padding: 0px;}
+    to{height: 100px; padding: 6px 6px;}
+}
+
+.actor_info > div > h3{
+    font-weight: 500;
+    text-align: start;
+}
+
+.gender_info{
+    width: 50%;
+    display: flex;
+    justify-content: space-evenly;
+}
+.country_info{
+    width: 50%;
+    display: flex;
+    justify-content: space-evenly;
+}
+.birth_info{
+    width: 100%;
+    display: flex;
+    justify-content: space-evenly;
+}
+.temathic_logo{
+    width: 20%;
+    height: 35px;
+    object-fit: contain;
 }
 
 .actorPage_name{
+    display: flex;
+    align-items: center;
+}
+.actorPage_name > h1{
+    width: 80%;
+    font-size: 28px;
+    line-height: normal;
+    font-weight: 600;
+    margin-top: 0px;
+    margin-bottom: 0px;
+    
+}
+
+.down_arrow {
+    margin-left: 15px;
+    width: 35px;
+    cursor: pointer;
+    transition-timing-function: ease-in-out;
+    transition: .6s;
+}
+
+.down_arrow_choosed{
+    transform: rotate(-180deg);
+}
+
+.papers_title{
     font-size: 60px;
-    margin-bottom: 20px;
-    margin-top: 10px;
+    letter-spacing: 10px;
+    line-height: 50px;
+    grid-column: 2/4;
+    margin: 0px;
 }
 
 .papers_container{
@@ -32,4 +135,5 @@
     flex-wrap: wrap;
     gap: 20px;
     grid-template-columns: repeat(3, 1fr);
+    margin-bottom: 100px;
 }

@@ -8,6 +8,12 @@
     overflow: hidden;
 }
 
+.show_box:hover{
+    scale: 1.1;
+    z-index: 10;
+    box-shadow: 0 0 20px 10px black;
+}
+
 .show_title{
     position: absolute;
     color: white;

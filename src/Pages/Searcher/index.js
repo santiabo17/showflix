@@ -2,10 +2,11 @@ import { Link, useLocation, useNavigate } from 'react-router-dom'
 import './Searcher.css'
 import React from 'react';
 import { ShowContainer } from '../../Components/ShowContainer';
-import { ShowCard } from '../../Components/ShowCard';
 import { useLocalStorage } from '../../Utils/useLocalStorage';
+import { useApi } from '../../Utils/useApi';
 
 function Searcher () {
+    const {shows, loading} = useApi();
     const [searchValue, setSearchValue] = React.useState('');
     const [filteredShows, setFilteredShows] = React.useState([]);
     const location = useLocation();
@@ -19,8 +20,6 @@ function Searcher () {
       } = useLocalStorage('favouritesShows', []);
 
     React.useEffect(() => {
-        // const shows = location.state.shows;
-        const shows = favouritesShows;
         if(searchValue.length > 0){
             setFilteredShows(shows.filter(show => show.name.toLowerCase().includes(searchValue.toLowerCase())));
         } else {
@@ -56,7 +55,7 @@ function Searcher () {
             {/* <ShowContainer>
                 {searchValue.length > 0 && filteredShows.slice(0, 20).map(show => <ShowCard show={show} key={show.id}/>)}
             </ShowContainer> */}
-            <ShowContainer loading={loadingFavs} shows={filteredShows} section={1} favouritesShows={favouritesShows} favShowAction={addShows}/>
+            <ShowContainer loading={loading} shows={filteredShows} section={1} favouritesShows={favouritesShows} favShowAction={addShows}/>
             <Link to='/'><span className='close_btn'>X</span></Link>
         </div>
     )

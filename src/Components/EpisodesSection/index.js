@@ -42,24 +42,24 @@ function EpisodesSection({showIndex}){
 
     React.useEffect(() => {
         setTimeout(() => {
+            console.log(episodeSelected);
             const episodeInfo = document.querySelector(".episode_selected_content");
             if(episodeInfo != null){
                 console.log(episodeInfo);
                 const episodeInfoStyle = getComputedStyle(episodeInfo);
                 const contentHeight = episodeInfoStyle.height.substring(0, episodeInfoStyle.height.length - 2);
                 console.log(contentHeight);
+                console.log(contentHeight/2);
+                // console.log((episodes.length - episodeSelected + 1)* 110 - 60);
                 if(episodeSelected > 4){
                     if (contentHeight/2 > ((episodes.length - episodeSelected + 1)* 110 - 60)){
                         episodeInfo.style.marginTop = (((episodes.length)*110) - 10 - contentHeight) +"px"
                     } else {
-                        episodeInfo.style.marginTop = (((episodeSelected-1)*110) + 50 - (contentHeight/2)) +"px";
+                        episodeInfo.style.marginTop = (((episodeSelected-1)*110) - (contentHeight/2) + 50) + 'px';
                     }
                 } 
-                    console.log(contentHeight/2);
-                    console.log((episodes.length - episodeSelected + 1)* 110 - 60);
-                    console.log("yeahhhh")
             }
-        }, 500)
+        }, 1000)
     }, [episodeSelected])
 
     return(
@@ -71,7 +71,6 @@ function EpisodesSection({showIndex}){
                     <div className="episodes_container">
                         {episodes?.map((episode, key) => <EpisodeCard key={key} number={key+1} name= {episode.name} image={episode.image?.medium} loading={loading} episodeSelected={episodeSelected} setEpisodeSelected={setEpisodeSelected}/>)} 
                     </div>
-                    
                 </div>
                 {episodeSelected && 
                     <div key={episodeSelected} className='episode_selected_content episode_selected_content_animation'>
